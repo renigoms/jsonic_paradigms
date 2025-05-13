@@ -1,3 +1,4 @@
 /testes_com_ply/
 .venv/
 .idea/
+/jsonic/analisador_lexico/__pycache__/

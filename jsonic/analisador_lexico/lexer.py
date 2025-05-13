@@ -1,6 +1,5 @@
-import sys
-
 import ply.lex as lex
+
 tokens = [
     "OPEN_JSON",
     "WRITE_JSON",
@@ -61,8 +60,3 @@ SAVE_JSON "test.json" INTO "c:/user/renan"
 WRITE_JSON "{"teste":"test"}" INTO "c:/user/renan"
 SELECT_JSON KEY = "TEST" OR SELECT_JSON *
 """
-
-input_data = 'WRITE_JSON "{"name":"2"}" INTO "C:/user/renan"'
-lexer.input(input_data)
-for tok in lexer:
-    print(tok)
