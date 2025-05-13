@@ -1,6 +1,10 @@
 import tkinter as tk
-from tkinter import ttk  # para barra de rolagem moderna
-from lexer import lexer
+from tkinter import ttk
+
+
+
+
+
 window = tk.Tk()
 
 class Application:
@@ -53,12 +57,13 @@ class Application:
         conteudo = self.text1.get("1.0", "end-1c") 
          # do início até o fim, excluindo a quebra de linha final
 
-        lexer.input(conteudo)
+        from jsonic.analisador_lexico.lexer import get_lexer
+        get_lexer.input(conteudo)
        
         self.text2.config(state="normal")
         # # Limpa o Text2
         self.text2.delete("1.0", "end")
         # # Insere o conteúdo no Text2
-        for tok in lexer:
+        for tok in get_lexer:
             self.text2.insert("1.0", str(tok)+'\n')
         self.text2.config(state="disabled")
