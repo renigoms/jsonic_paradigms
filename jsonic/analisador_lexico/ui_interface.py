@@ -62,8 +62,3 @@ class Application:
         for tok in lexer:
             self.text2.insert("1.0", str(tok)+'\n')
         self.text2.config(state="disabled")
-
-
-
-if __name__ == "__main__":
-    app = Application()
