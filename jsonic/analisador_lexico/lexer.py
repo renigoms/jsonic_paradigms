@@ -52,7 +52,10 @@ def t_error(t):
 
 
 # CONFIGURING TOKENS
-get_lexer = lex.lex()
+lexer = lex.lex()
+
+def get_lexer():
+    return lexer
 
 """
 Lang commands

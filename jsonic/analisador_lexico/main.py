@@ -1,4 +1,7 @@
-from analisador_lexico.ui_interface import Application
+
+
+from ui_interface import Application
+
 
 def main():
     app = Application()
