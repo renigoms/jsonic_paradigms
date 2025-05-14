@@ -2,3 +2,4 @@
 .venv/
 .idea/
 /jsonic/analisador_lexico/__pycache__/
+jsonic/__pycache__/

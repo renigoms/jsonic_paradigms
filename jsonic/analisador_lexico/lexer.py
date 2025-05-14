@@ -50,7 +50,7 @@ def t_error(t):
 
 
 # CONFIGURING TOKENS
-lexer = lex.lex()
+get_lexer = lex.lex()
 
 """
 Lang commands
