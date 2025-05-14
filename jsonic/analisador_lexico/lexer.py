@@ -12,7 +12,8 @@ tokens = [
     "EQUAL",
     "TEXT",
     "ALL",
-    "DATA_JSON"
+    "DATA_JSON",
+    "CLOSE_JSON"
 ]
 
 t_ALL = r'\*'
@@ -23,6 +24,7 @@ t_SELECT_JSON = r'SELECT_JSON | select_json'
 t_KEY = r'KEY | key'
 t_INTO = r'INTO | into'
 t_EQUAL = r'\='
+t_CLOSE_JSON = r'CLOSE_JSON | close_json'
 
 def t_TEXT(t):
     r'"[a-zçA-ZÇ_]+[a-zçA-ZÇ0-9_]+"'
@@ -50,7 +52,10 @@ def t_error(t):
 
 
 # CONFIGURING TOKENS
-get_lexer = lex.lex()
+lexer = lex.lex()
+
+def get_lexer():
+    return lexer
 
 """
 Lang commands
@@ -59,4 +64,5 @@ OPEN_JSON "test.json"
 SAVE_JSON "test.json" INTO "c:/user/renan"
 WRITE_JSON "{"teste":"test"}" INTO "c:/user/renan"
 SELECT_JSON KEY = "TEST" OR SELECT_JSON *
+CLOSE_JSON
 """
