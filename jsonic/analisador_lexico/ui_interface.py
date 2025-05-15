@@ -15,6 +15,7 @@ class Application:
 
     def screen(self):
         self.window.geometry("600x400")
+        self.window.resizable(False, False)
         self.window.title("Analisador léxico")
         self.window.configure(background="black")
 
